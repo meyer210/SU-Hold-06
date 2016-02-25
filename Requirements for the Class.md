@@ -5,7 +5,9 @@
 - Company
 - Student
 - Subject
+
 ## Functions Needed for each class
+
 ### Admin
 - Create Subjects
 - Remove Subjects
