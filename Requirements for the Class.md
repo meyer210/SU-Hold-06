@@ -1,6 +1,6 @@
 # Classes needed:
-..* Admin
-..* Lecturer
+⋅⋅* Admin
+⋅⋅* Lecturer
 ..* Advisor
 ..* Student
 ..* Subject
