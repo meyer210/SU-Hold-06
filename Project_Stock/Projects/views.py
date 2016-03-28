@@ -6,7 +6,7 @@ from .models import Project
 def index(request):
     latestProjectList = Project.objects.order_by('-pub_date')[:5]
     output = ', '.join([p.title for p in latestProjectList])
-    return render(request, 'Projects\index.html', {'latestProjectList' : output})
+    return render(request, 'Projects/index.html', {'latestProjectList' : output})
 
 def detail(request, project_id):
     output = get_object_or_404(Project, pk=project_id)

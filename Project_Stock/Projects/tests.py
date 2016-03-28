@@ -3,7 +3,8 @@ from django.test import TestCase
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.test.utils import setup_test_environment
-
+from django.test import Client
+from django.core.urlresolvers import reverse
 # Create your tests here.
 
 class ProjectTestCase(TestCase):
@@ -59,12 +60,15 @@ class ProjectTestCase(TestCase):
         project2.pub_date = now
         self.assertEqual(project1.pub_date, now)
         self.assertEqual(project2.pub_date, now)
-class ViewTestCast(TestCase):
+class ViewTestCase(TestCase):
     def setUp(self):
         setup_test_environment()
-        client = Client()
         u = User.objects.create_user('John','john@john.dk','chill_dude')
         u.save()
-        project1 = Project.objects.create(title='Project 1',description='this is a test', author=User.objects.get(username='john'),pub_date=timezone.now())
-        project2 = Project.objects.create(title='Project 2',description='this is a test', author=User.objects.get(username='john'),pub_date=timezone.now())
-    def test_
+        Project.objects.create(title='Project 1',description='this is a test', author=u,pub_date=timezone.now())
+        Project.objects.create(title='Project 2',description='this is a test', author=u,pub_date=timezone.now())
+    def test_index_view(self):
+        client = Client()
+        response = client.get('/')
+        response = client.get('/Projects/')
+        response.content
