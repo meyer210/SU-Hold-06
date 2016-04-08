@@ -1,7 +1,7 @@
 {% if latestProjectList %}
     <ul>
     {% for p in latestProjectList %}
-        <a href = "/Projects/{{ p.id}}/">{{p.title}}</a>
+        <li><a href = {% url 'detail' p.id %}>{{p.title}}</a>
     {%endfor%}
     </ul>
 {% else %}

@@ -11,8 +11,10 @@ class ProjectTestCase(TestCase):
     def setUp(self):
         u = User.objects.create_user('John','john@john.dk','hello,world')
         u.save()
-        Project.objects.create(title="Project 1", description="introduction to the project subject 1", author=User.objects.get(username='John'), pub_date=timezone.now())
-        Project.objects.create(title="Project 2", description="introduction to the project subject 2", author=User.objects.get(username='John'), pub_date=timezone.now())
+        Project.objects.create(title="Project 1", description="introduction to the project subject 1",
+                               author=User.objects.get(username='John'), pub_date=timezone.now())
+        Project.objects.create(title="Project 2", description="introduction to the project subject 2",
+                               author=User.objects.get(username='John'), pub_date=timezone.now())
     def test_correct_title(self):
         """
         Testing:
@@ -60,15 +62,13 @@ class ProjectTestCase(TestCase):
         project2.pub_date = now
         self.assertEqual(project1.pub_date, now)
         self.assertEqual(project2.pub_date, now)
-class ViewTestCase(TestCase):
+
+class viewTestCast(TestCase):
     def setUp(self):
-        setup_test_environment()
-        u = User.objects.create_user('John','john@john.dk','chill_dude')
+        u = User.objects.create_user('John', 'john@john.dk', 'hello,world')
         u.save()
-        Project.objects.create(title='Project 1',description='this is a test', author=u,pub_date=timezone.now())
-        Project.objects.create(title='Project 2',description='this is a test', author=u,pub_date=timezone.now())
-    def test_index_view(self):
-        client = Client()
-        response = client.get('/')
-        response = client.get('/Projects/')
-        response.content
+        Project.objects.create(title="Project 1", description="introduction to the project subject 1",
+                               author=User.objects.get(username='John'), pub_date=timezone.now())
+        Project.objects.create(title="Project 2", description="introduction to the project subject 2",
+                               author=User.objects.get(username='John'), pub_date=timezone.now())
+        def test_
