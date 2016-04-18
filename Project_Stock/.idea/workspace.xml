@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2400d957-8380-4be2-817d-1cc8151e45c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projects/admin.py" afterPath="$PROJECT_DIR$/Projects/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projects/templates/Projects/index.html" afterPath="$PROJECT_DIR$/Projects/templates/Projects/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projects/tests.py" afterPath="$PROJECT_DIR$/Projects/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Projects/views.py" afterPath="$PROJECT_DIR$/Projects/views.py" />
-    </list>
+    <list default="true" id="2400d957-8380-4be2-817d-1cc8151e45c6" name="Default" comment="" />
     <ignored path="Project_Stock.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
